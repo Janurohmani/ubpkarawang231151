@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Fisik Basis Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Model Fisik Basis Data</h1>
+    
+    <h2>Pengenalan Model Fisik</h2>
+    <p>Model fisik basis data adalah representasi dari bagaimana data akan disimpan secara fisik di dalam sistem penyimpanan. Ini mencakup struktur data yang digunakan, tipe data untuk setiap atribut, dan cara data terorganisir di disk. Pemahaman model fisik sangat penting untuk pengoptimalan performa sistem basis data dan efisiensi penyimpanan.</p>
+
+    <h2>Pengertian Model Fisik</h2>
+    <p>
+        Model fisik menunjukkan bagaimana struktur logis dari basis data akan diimplementasikan dalam perangkat keras. Ini mencakup detail seperti indeks, partisi, dan pemetaan tipe data. Dengan memahami model fisik, pengembang dapat merencanakan penggunaan ruang penyimpanan yang optimal dan meningkatkan kecepatan akses data.
+    </p>
+
+    <h2>Komponen Model Fisik</h2>
+    <p>Beberapa komponen utama dalam model fisik basis data meliputi:</p>
+    <ul>
+        <li><b>Tipe Data:</b> Jenis data yang digunakan untuk setiap atribut, seperti integer, varchar, date, dan lainnya.</li>
+        <li><b>Indeks:</b> Struktur yang meningkatkan kecepatan pencarian data di dalam tabel.</li>
+        <li><b>Partisi:</b> Pembagian tabel menjadi beberapa bagian yang lebih kecil untuk meningkatkan performa.</li>
+        <li><b>Keamanan Data:</b> Strategi yang diterapkan untuk melindungi data dari akses yang tidak sah, seperti enkripsi.</li>
+    </ul>
+
+    <h2>Perancangan Model Fisik</h2>
+    <p>
+        Proses perancangan model fisik mencakup langkah-langkah berikut:
+        <ul>
+            <li><b>Pemilihan Tipe Data:</b> Memilih tipe data yang sesuai untuk setiap atribut berdasarkan kebutuhan aplikasi.</li>
+            <li><b>Normalisasi:</b> Mengurangi redundansi data dengan memecah tabel yang besar menjadi tabel yang lebih kecil.</li>
+            <li><b>Pembuatan Indeks:</b> Membangun indeks pada kolom yang sering digunakan dalam pencarian untuk mempercepat akses.</li>
+        </ul>
+    </p>
+
+    <h2>Contoh Diagram Model Fisik</h2>
+    <p>Di bawah ini adalah contoh diagram model fisik yang menunjukkan bagaimana struktur basis data akan diimplementasikan:</p>
+    <img src="assets/img/2.png" alt="Diagram Model Fisik Basis Data">
+    
+    <h2>Keuntungan Menggunakan Model Fisik</h2>
+    <p>Penggunaan model fisik basis data memiliki beberapa keuntungan, antara lain:</p>
+    <ul>
+        <li><b>Optimasi Kinerja:</b> Dengan perancangan yang baik, sistem dapat memproses permintaan data dengan lebih cepat.</li>
+        <li><b>Penggunaan Ruang Penyimpanan yang Efisien:</b> Meminimalkan penggunaan ruang dengan pemilihan tipe data yang tepat dan struktur yang efisien.</li>
+        <li><b>Keamanan Data yang Lebih Baik:</b> Mengimplementasikan kontrol akses dan enkripsi untuk melindungi data.</li>
+    </ul>
+
+    <h2>Kesimpulan</h2>
+    <p>Model fisik basis data merupakan komponen penting dalam desain basis data yang berfungsi untuk meningkatkan efisiensi dan keamanan penyimpanan data. Dengan memahami model fisik, pengembang dapat merancang sistem yang lebih responsif dan efektif untuk kebutuhan aplikasi yang beragam.</p>
+
+</body>
+</html>

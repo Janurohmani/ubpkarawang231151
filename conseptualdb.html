@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Konseptual Basis Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Model Konseptual Basis Data</h1>
+    
+    <h2>Pengenalan Model Konseptual Basis Data</h2>
+    <p>Model konseptual basis data adalah representasi tingkat tinggi dari sistem basis data yang menggambarkan struktur informasi tanpa memperhatikan bagaimana data disimpan secara fisik. Tujuannya adalah untuk memberikan pemahaman mendalam tentang entitas dan hubungan antar entitas di dalam sebuah sistem sebelum diimplementasikan ke dalam model logis atau fisik.</p>
+
+    <h2>Pengertian Model Konseptual</h2>
+    <p>
+        Model konseptual merupakan tahap pertama dalam perancangan basis data, di mana fokus utama adalah memahami kebutuhan informasi dan aliran data. Ini mencakup pembuatan representasi abstrak dari entitas, atribut, dan relasi antar entitas tanpa memikirkan detail implementasi teknis. Biasanya, model konseptual digambarkan menggunakan **Entity Relationship Diagram (ERD)**, yang memetakan komponen-komponen basis data secara visual.
+    </p>
+
+    <h2>Komponen Utama dalam Model Konseptual</h2>
+    <p>Dalam model konseptual basis data, terdapat beberapa komponen utama yang harus dipahami, yaitu:</p>
+    <ul>
+        <li><b>Entitas (Entities):</b> Entitas adalah objek nyata atau konsep yang datanya disimpan dalam basis data. Setiap entitas mewakili hal atau objek tertentu, seperti "Mahasiswa", "Dosen", atau "Mata Kuliah".</li>
+        <li><b>Atribut (Attributes):</b> Atribut adalah karakteristik atau properti dari entitas. Sebagai contoh, entitas "Mahasiswa" mungkin memiliki atribut seperti "Nama", "NIM", dan "Alamat".</li>
+        <li><b>Relasi (Relationships):</b> Relasi menggambarkan hubungan antar entitas dalam sistem. Contoh, entitas "Mahasiswa" mungkin memiliki relasi dengan entitas "Mata Kuliah" yang menunjukkan bahwa seorang mahasiswa dapat mengambil beberapa mata kuliah.</li>
+        <li><b>Kardinalitas (Cardinality):</b> Kardinalitas menjelaskan jumlah minimum dan maksimum entitas yang dapat berhubungan dengan entitas lain dalam suatu relasi. Misalnya, satu mahasiswa dapat mengambil beberapa mata kuliah (relasi one-to-many).</li>
+    </ul>
+
+    <h2>Manfaat Model Konseptual</h2>
+    <p>Penggunaan model konseptual dalam perancangan basis data memberikan beberapa manfaat utama, antara lain:</p>
+    <ul>
+        <li><b>Pemahaman Sistem yang Lebih Baik:</b> Model konseptual membantu semua pemangku kepentingan dalam memahami sistem dengan lebih baik, terutama dalam hal entitas dan relasi yang ada di dalamnya.</li>
+        <li><b>Komunikasi yang Jelas:</b> ERD dan diagram lainnya memungkinkan komunikasi yang lebih jelas antara pengembang, analis sistem, dan pengguna, sehingga mengurangi kesalahan dalam perancangan.</li>
+        <li><b>Dasar untuk Model Logis:</b> Model konseptual menjadi dasar bagi pembuatan model logis, yang kemudian akan diterjemahkan menjadi model fisik yang dapat diimplementasikan pada sistem manajemen basis data (DBMS).</li>
+        <li><b>Fleksibilitas Desain:</b> Desain yang berbasis model konseptual memberikan fleksibilitas bagi pengembang untuk melakukan perubahan atau penyesuaian di kemudian hari tanpa mengubah basis data yang sudah ada.</li>
+    </ul>
+
+    <h2>Contoh Entity Relationship Diagram (ERD)</h2>
+    <p>Berikut adalah contoh sederhana ERD untuk sistem akademik:</p>
+    <img src="assets/img/ERDExample.png" alt="Contoh ERD Sistem Akademik">
+    <p>Dalam diagram di atas, terdapat beberapa entitas seperti "Mahasiswa", "Dosen", dan "Mata Kuliah". Masing-masing entitas memiliki atribut terkait. Misalnya, entitas "Mahasiswa" memiliki atribut seperti "NIM", "Nama", dan "Alamat". Relasi antara entitas "Mahasiswa" dan "Mata Kuliah" menunjukkan bahwa mahasiswa dapat mengambil beberapa mata kuliah, yang merupakan relasi one-to-many.</p>
+
+    <h2>Tahapan dalam Membuat Model Konseptual</h2>
+    <p>Berikut adalah tahapan-tahapan yang umumnya dilakukan dalam membangun model konseptual basis data:</p>
+    <ul>
+        <li><b>Analisis Kebutuhan:</b> Identifikasi kebutuhan informasi yang akan disimpan dalam sistem. Ini mencakup wawancara dengan pengguna dan pemangku kepentingan.</li>
+        <li><b>Identifikasi Entitas dan Relasi:</b> Tentukan entitas yang relevan dengan sistem dan bagaimana entitas-entitas tersebut saling berhubungan.</li>
+        <li><b>Penentuan Atribut:</b> Setiap entitas harus memiliki atribut yang menjelaskan properti dari entitas tersebut.</li>
+        <li><b>ERD Modeling:</b> Buat diagram ERD untuk memvisualisasikan entitas, atribut, dan relasi antar entitas.</li>
+    </ul>
+
+    <h2>Kesimpulan</h2>
+    <p>Model konseptual basis data adalah langkah penting dalam perancangan basis data yang memberikan gambaran abstrak mengenai struktur dan relasi dalam sistem. Dengan menggunakan model konseptual seperti ERD, pengembang dapat merancang basis data yang lebih baik dan mengurangi kesalahan desain. Pemahaman yang baik tentang model konseptual juga akan memberikan fondasi yang kuat untuk melanjutkan ke tahap desain logis dan fisik dalam pengembangan basis data.</p>
+
+</body>
+</html>
