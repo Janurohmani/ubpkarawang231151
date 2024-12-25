@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERD dengan Intersection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .example {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .example h4 {
+            color: #007bff;
+        }
+        .img-fluid {
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="section-title">
+        <h2>ERD dengan Intersection</h2>
+        <h3>5 Kasus Relasi Many-to-Many</h3>
+    </div>
+
+    <div class="example">
+        <h4>Kasus 1: Siswa dan Mata Pelajaran</h4>
+        <p><strong>Entitas:</strong></p>
+        <ul>
+            <li><strong>Siswa:</strong> <code>id_siswa</code>, <code>nama</code>, <code>kelas</code></li>
+            <li><strong>Mata Pelajaran:</strong> <code>id_mata_pelajaran</code>, <code>nama_mata_pelajaran</code></li>
+        </ul>
+        <p><strong>Tabel Penghubung:</strong> <code>Siswa_Mata_Pelajaran</code>: <code>id_siswa</code>, <code>id_mata_pelajaran</code></p>
+        <p><strong>Deskripsi:</strong> Siswa dapat mendaftar di banyak mata pelajaran, dan setiap mata pelajaran dapat diambil oleh banyak siswa.</p>
+    </div>
+
+    <div class="example">
+        <h4>Kasus 2: Penulis dan Buku</h4>
+        <p><strong>Entitas:</strong></p>
+        <ul>
+            <li><strong>Penulis:</strong> <code>id_penulis</code>, <code>nama</code>, <code>negara</code></li>
+            <li><strong>Buku:</strong> <code>id_buku</code>, <code>judul</code>, <code>tahun_terbit</code></li>
+        </ul>
+        <p><strong>Tabel Penghubung:</strong> <code>Penulis_Buku</code>: <code>id_penulis</code>, <code>id_buku</code></p>
+        <p><strong>Deskripsi:</strong> Seorang penulis dapat menulis banyak buku, dan setiap buku dapat ditulis oleh banyak penulis.</p>
+    </div>
+
+    <div class="example">
+        <h4>Kasus 3: Mahasiswa dan Kegiatan</h4>
+        <p><strong>Entitas:</strong></p>
+        <ul>
+            <li><strong>Mahasiswa:</strong> <code>id_mahasiswa</code>, <code>nama</code>, <code>jurusan</code></li>
+            <li><strong>Kegiatan:</strong> <code>id_kegiatan</code>, <code>nama_kegiatan</code>, <code>tanggal</code></li>
+        </ul>
+        <p><strong>Tabel Penghubung:</strong> <code>Mahasiswa_Kegiatan</code>: <code>id_mahasiswa</code>, <code>id_kegiatan</code></p>
+        <p><strong>Deskripsi:</strong> Mahasiswa dapat mengikuti banyak kegiatan, dan setiap kegiatan dapat diikuti oleh banyak mahasiswa.</p>
+    </div>
+
+    <div class="example">
+        <h4>Kasus 4: Produk dan Kategori</h4>
+        <p><strong>Entitas:</strong></p>
+        <ul>
+            <li><strong>Produk:</strong> <code>id_produk</code>, <code>nama_produk</code>, <code>harga</code></li>
+            <li><strong>Kategori:</strong> <code>id_kategori</code>, <code>nama_kategori</code></li>
+        </ul>
+        <p><strong>Tabel Penghubung:</strong> <code>Produk_Kategori</code>: <code>id_produk</code>, <code>id_kategori</code></p>
+        <p><strong>Deskripsi:</strong> Setiap produk dapat termasuk dalam banyak kategori, dan setiap kategori dapat memiliki banyak produk.</p>
+    </div>
+
+    <div class="example">
+        <h4>Kasus 5: Film dan Aktor</h4>
+        <p><strong>Entitas:</strong></p>
+        <ul>
+            <li><strong>Film:</strong> <code>id_film</code>, <code>judul</code>, <code>tahun</code></li>
+            <li><strong>Aktor:</strong> <code>id_aktor</code>, <code>nama</code>, <code>tanggal_lahir</code></li>
+        </ul>
+        <p><strong>Tabel Penghubung:</strong> <code>Film_Aktor</code>: <code>id_film</code>, <code>id_aktor</code></p>
+        <p><strong>Deskripsi:</strong> Setiap film dapat dibintangi oleh banyak aktor, dan setiap aktor dapat membintangi banyak film.</p>
+    </div>
+
+    <div class="example">
+        <h4>Gambar Contoh ERD:</h4>
+        <img src="assets/img/M.jpg" alt="Contoh ERD" class="img-fluid">
+    </div>
+
+    <h4>Solusi yang Digunakan</h4>
+    <p>Untuk setiap kasus di atas, solusi yang digunakan adalah:</p>
+    <ol>
+        <li><strong>Identifikasi Entitas:</strong> Pertama, identifikasi entitas yang terlibat dalam relasi many-to-many.</li>
+        <li><strong>Buat Tabel Penghubung:</strong> Buat tabel penghubung yang menyimpan kunci utama dari kedua entitas.</li>
+        <li><strong>Definisikan Relasi:</strong> Definisikan relasi antara entitas dan tabel penghubung.</li>
+        <li><strong>Menjaga Integritas Data:</strong> Dengan menggunakan tabel penghubung, kita dapat menjaga integritas data dan menghindari masalah yang ditimbulkan oleh relasi many-to-many.</li>
+    </ol>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Database Concepts. All rights reserved.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

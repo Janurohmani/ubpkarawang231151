@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan SQL dan Kategorinya</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .step h4 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="section-title">
+        <h2>Pengenalan SQL dan Kategorinya</h2>
+        <h3>Memahami SQL, DDL, DML, DCL, dan TCL</h3>
+    </div>
+
+    <div class="step">
+        <h4>1. Apa Itu SQL?</h4>
+        <p>SQL (Structured Query Language) adalah bahasa standar yang digunakan untuk mengelola dan memanipulasi basis data relasional. SQL digunakan untuk melakukan berbagai operasi pada data, termasuk pengambilan, penyimpanan, pembaruan, dan penghapusan data.</p>
+    </div>
+
+    <div class="step">
+        <h4>2. DDL (Data Definition Language)</h4>
+        <p>DDL adalah subset dari SQL yang digunakan untuk mendefinisikan struktur basis data. Perintah DDL digunakan untuk membuat, mengubah, dan menghapus objek basis data seperti tabel, indeks, dan skema.</p>
+        <h5>Contoh Perintah DDL:</h5>
+        <pre><code>-- Membuat tabel
+CREATE TABLE siswa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nama VARCHAR(100),
+    umur INT,
+    kelas VARCHAR(10)
+);
+
+-- Mengubah tabel
+ALTER TABLE siswa ADD COLUMN alamat VARCHAR(255);
+
+-- Menghapus tabel
+DROP TABLE siswa;</code></pre>
+    </div>
+
+    <div class="step">
+        <h4>3. DML (Data Manipulation Language)</h4>
+        <p>DML adalah subset dari SQL yang digunakan untuk memanipulasi data dalam tabel. Perintah DML digunakan untuk menambah, mengubah, dan menghapus data dalam basis data.</p>
+        <h5>Contoh Perintah DML:</h5>
+        <pre><code>-- Menambahkan data
+INSERT INTO siswa (nama, umur, kelas) VALUES ('John Doe', 15, '10A');
+
+-- Mengubah data
+UPDATE siswa SET umur = 16 WHERE nama = 'John Doe';
+
+-- Menghapus data
+DELETE FROM siswa WHERE nama = 'John Doe';</code></pre>
+    </div>
+
+    <div class="step">
+        <h4>4. DCL (Data Control Language)</h4>
+        <p>DCL adalah subset dari SQL yang digunakan untuk mengontrol akses ke data dalam basis data. Perintah DCL digunakan untuk memberikan atau mencabut hak akses pengguna.</p>
+        <h5>Contoh Perintah DCL:</h5>
+        <pre><code>-- Memberikan hak akses
+GRANT SELECT, INSERT ON siswa TO 'user'@'localhost';
+
+-- Mencabut hak akses
+REVOKE INSERT ON siswa FROM 'user'@'localhost';</code></pre>
+    </div>
+
+    <div class="step">
+        <h4>5. TCL (Transaction Control Language)</h4>
+        <p>TCL adalah subset dari SQL yang digunakan untuk mengelola transaksi dalam basis data. Perintah TCL digunakan untuk mengontrol transaksi, termasuk menyimpan dan membatalkan perubahan.</p>
+        <h5>Contoh Perintah TCL:</h5>
+        <pre><code>-- Memulai transaksi
+START TRANSACTION;
+
+-- Menyimpan perubahan
+COMMIT;
+
+-- Membatalkan perubahan
+ROLLBACK;</code></pre>
+    </div>
+
+    <h4>Kesimpulan</h4>
+    <p>SQL adalah bahasa yang sangat penting dalam pengelolaan basis data relasional. Memahami kategori-kategori SQL seperti DDL, DML, DCL, dan TCL sangat penting untuk melakukan operasi yang efektif dan efisien pada basis data.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

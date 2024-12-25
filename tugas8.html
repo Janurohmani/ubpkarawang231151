@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary Key, Foreign Key, dan Candidate Key</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .example {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .example h4 {
+            color: #007bff;
+        }
+        .img-fluid {
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="section-title">
+        <h2>Primary Key, Foreign Key, dan Candidate Key</h2>
+        <h3>Pengertian dan Contoh Penerapan dalam ERD</h3>
+    </div>
+
+    <div class="example">
+        <h4>1. Primary Key</h4>
+        <p>Primary Key adalah atribut atau kombinasi atribut yang secara unik mengidentifikasi setiap entitas dalam tabel. Setiap nilai dalam primary key harus unik dan tidak boleh null. Primary key memastikan bahwa tidak ada dua baris dalam tabel yang memiliki nilai yang sama untuk kolom tersebut.</p>
+        <h5>Contoh Penerapan dalam ERD:</h5>
+        <ul>
+            <li><strong>Tabel Siswa:</strong> <code>id_siswa</code></li>
+            <li><strong>Tabel Buku:</strong> <code>id_buku</code></li>
+            <li><strong>Tabel Kelas:</strong> <code>id_kelas</code></li>
+            <li><strong>Tabel Guru:</strong> <code>id_guru</code></li>
+            <li><strong>Tabel Peminjaman:</strong> <code>id_peminjaman</code></li>
+        </ul>
+        
+
+    <div class="example">
+        <h4>2. Foreign Key</h4>
+        <p>Foreign Key adalah atribut dalam satu tabel yang merujuk pada primary key di tabel lain. Foreign key digunakan untuk menjaga integritas referensial antara dua tabel. Dengan menggunakan foreign key, kita dapat memastikan bahwa hubungan antar tabel tetap konsisten.</p>
+        <h5>Contoh Penerapan dalam ERD:</h5>
+        <ul>
+            <li><strong>Tabel Peminjaman:</strong> <code>id_siswa</code> (merujuk ke <code>id_siswa</code> di Tabel Siswa)</li>
+            <li><strong>Tabel Peminjaman:</strong> <code>id_buku</code> (merujuk ke <code>id_buku</code> di Tabel Buku)</li>
+            <li><strong>Tabel Kelas:</strong> <code>id_guru</code> (merujuk ke <code>id_guru</code> di Tabel Guru)</li>
+            <li><strong>Tabel Siswa:</strong> <code>id_kelas</code> (merujuk ke <code>id_kelas</code> di Tabel Kelas)</li>
+            <li><strong>Tabel Ujian:</strong> <code>id_siswa</code> (merujuk ke <code>id_siswa</code> di Tabel Siswa)</li>
+        </ul>
+        
+    </div>
+
+    <div class="example">
+        <h4>3. Candidate Key</h4>
+        <p>Candidate Key adalah atribut atau kombinasi atribut yang dapat digunakan sebagai primary key. Setiap candidate key harus unik dan tidak boleh null. Salah satu candidate key akan dipilih sebagai primary key, sedangkan yang lainnya akan menjadi alternatif.</p>
+        <h5>Contoh Penerapan dalam ERD:</h5>
+        <ul>
+            <li><strong>Tabel Siswa:</strong> <code>no_identitas</code>, <code>email</code></li>
+            <li><strong>Tabel Buku:</strong> <code>isbn</code>, <code>judul</code></li>
+            <li><strong>Tabel Guru:</strong> <code>nip</code>, <code>email</code></li>
+            <li><strong>Tabel Kelas:</strong> <code>kode_kelas</code>, <code>nama_kelas</code></li>
+            <li><strong>Tabel Peminjaman:</strong> <code>no_peminjaman</code>, <code>tanggal_peminjaman</code></li>
+        </ul>
+    </div>
+
+    <h4>Kesimpulan</h4>
+    <p>Primary Key, Foreign Key, dan Candidate Key adalah konsep penting dalam desain basis data yang membantu menjaga integritas data dan hubungan antar tabel. Memahami perbedaan dan penerapan masing-masing kunci sangat penting dalam pengembangan sistem basis data yang efisien.</p>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

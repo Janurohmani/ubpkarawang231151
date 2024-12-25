@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate 1000 Data Siswa dengan Mockaroo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .step h4 {
+            color: #007bff;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="section-title">
+        <h2>Generate 1000 Data Siswa dengan Mockaroo</h2>
+        <h3>Langkah-langkah untuk Menghasilkan dan Mengimpor Data</h3>
+    </div>
+
+    <div class="step">
+        <h4>1. Kunjungi Mockaroo</h4>
+        <p>Buka situs web <a href="https://www.mockaroo.com/" target="_blank">Mockaroo</a>.</p>
+    </div>
+
+    <div class="step">
+        <h4>2. Atur Skema Data</h4>
+        <p>Tambahkan field sesuai dengan struktur tabel siswa Anda:</p>
+        <ul>
+            <li><strong>id:</strong> (Type: Row Number)</li>
+            <li><strong>nama:</strong> (Type: Full Name)</li>
+            <li><strong>umur:</strong> (Type: Number, rentang 10-18)</li>
+            <li><strong>kelas:</strong> (Type: Custom List, misalnya '10A', '10B', '11A', '11B')</li>
+            <li><strong>alamat:</strong> (Type: Street Address)</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h4>3. Generate Data</h4>
+        <p>Atur jumlah baris data yang ingin Anda hasilkan menjadi <strong>1000</strong> dan klik tombol <strong>Download Data</strong> untuk mengunduh file CSV.</p>
+    </div>
+
+    <div class="step">
+        <h4>4. Persiapkan Database</h4>
+        <p>Pastikan Anda memiliki tabel siswa di database Anda. Berikut adalah contoh struktur tabel SQL:</p>
+        <pre><code>CREATE TABLE siswa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nama VARCHAR(100),
+    umur INT,
+    kelas VARCHAR(10),
+    alamat VARCHAR(255)
+);</code></pre>
+    </div>
+
+    <div class="step">
+        <h4>5. Import Data ke Database</h4>
+        <p>Gunakan perintah berikut untuk mengimpor data dari file CSV ke tabel siswa:</p>
+        <pre><code>LOAD DATA INFILE '/path/to/your/file.csv'
+INTO TABLE siswa
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;</code></pre>
+        <p>Gantilah <code>/path/to/your/file.csv</code> dengan jalur yang sesuai ke file CSV yang telah Anda unduh.</p>
+    </div>
+
+    <div class="step">
+        <h4>Contoh Query INSERT Manual</h4>
+        <p>Jika Anda ingin melakukan INSERT secara manual, berikut adalah contoh format query:</p>
+        <pre><code>INSERT INTO siswa (nama, umur, kelas, alamat) VALUES
+('John Doe', 15, '10A', '123 Main St'),
+('Jane Smith', 16, '10B', '456 Elm St'),
+('Alice Johnson', 14, '11A', '789 Oak St');</code></pre>
+    </div>
+
+    <h4>Kesimpulan</h4>
+    <p>Dengan menggunakan Mockaroo, Anda dapat dengan mudah menghasilkan 1000 data siswa yang realistis untuk pengujian dan pengembangan. Setelah menghasilkan data, Anda dapat mengimpor data tersebut ke dalam tabel siswa di database sekolah Anda menggunakan perintah SQL yang sesuai.</p>
+
+    <div class="video-container">
+        <h4>Video Tutorial</h4>
+        <!-- Menyisipkan video YouTube -->
+    <iframe src="https://www.youtube.com/embed/L7Su_637ZPE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p>Untuk tutorial lebih lanjut, silakan tonton video di atas.</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

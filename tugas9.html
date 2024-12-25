@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relasi pada ERD</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .example {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .example h4 {
+            color: #007bff;
+        }
+        .img-fluid {
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="section-title">
+        <h2>Relasi pada ERD</h2>
+        <h3>Pentingnya Memahami Relasi dalam Basis Data</h3>
+    </div>
+
+    <div class="example">
+        <h4>Apa Itu Relasi pada ERD?</h4>
+        <p>Relasi dalam Entity-Relationship Diagram (ERD) menggambarkan hubungan antara entitas dalam basis data. Relasi ini menunjukkan bagaimana entitas yang berbeda saling berinteraksi dan berhubungan satu sama lain.</p>
+        <h5>Jenis-Jenis Relasi:</h5>
+        <ul>
+            <li><strong>Satu-ke-Satu (1:1):</strong> Setiap entitas dalam tabel A berhubungan dengan tepat satu entitas dalam tabel B.</li>
+            <li><strong>Satu-ke-Banyak (1:N):</strong> Setiap entitas dalam tabel A dapat berhubungan dengan banyak entitas dalam tabel B.</li>
+            <li><strong>Banyak-ke-Banyak (M:N):</strong> Setiap entitas dalam tabel A dapat berhubungan dengan banyak entitas dalam tabel B.</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h4>Mengapa Many-to-Many Tidak Baik Digunakan?</h4>
+        <p>Relasi many-to-many dapat menyebabkan beberapa masalah, antara lain:</p>
+        <ul>
+            <li><strong>Kompleksitas Data:</strong> Sulit untuk mengelola dan mengakses data secara efisien.</li>
+            <li><strong>Kesulitan dalam Query:</strong> Memerlukan query yang lebih rumit, mempengaruhi kinerja basis data.</li>
+            <li><strong>Redundansi Data:</strong> Dapat menyebabkan informasi yang sama disimpan di beberapa tempat.</li>
+            <li><strong>Integritas Data:</strong> Menjaga integritas data menjadi lebih sulit.</li>
+        </ul>
+        <p>Untuk mengatasi masalah ini, biasanya digunakan tabel penghubung (junction table) untuk mengubah relasi menjadi dua relasi satu-ke-banyak.</p>
+    </div>
+
+    <div class="example">
+        <h4>Contoh Tabel Penghubung:</h4>
+        <p>Misalnya, untuk relasi antara Siswa dan Mata Pelajaran:</p>
+        <ul>
+            <li><strong>Tabel Siswa:</strong> <code>id_siswa</code>, <code>nama</code></li>
+            <li><strong>Tabel Mata Pelajaran:</strong> <code>id_mata_pelajaran</code>, <code>nama_mata_pelajaran</code></li>
+            <li><strong>Tabel Siswa_Mata_Pelajaran:</strong> <code>id_siswa</code>, <code>id_mata_pelajaran</code></li>
+        </ul>
+    </div>
+
+ 
+    <h4>Kesimpulan</h4>
+    <p>Relasi dalam ERD adalah cara untuk menggambarkan hubungan antara entitas dalam basis data. Meskipun relasi many-to-many dapat digunakan, mereka sering kali tidak disarankan karena kompleksitas dan masalah yang ditimbulkan. Menggunakan tabel penghubung adalah solusi yang umum untuk mengatasi masalah ini dan menjaga integritas serta efisiensi data.</p>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
